@@ -794,7 +794,7 @@ func (sc *suricataCollector) Collect(ch chan<- prometheus.Metric) {
 var (
 	version     string // Set via -ldflags -X main.version=...
 	showVersion = flag.Bool("version", false, "Output version information.")
-	socketPath  = flag.String("suricata.socket-path", "/var/run/suricata.socket", "Path to the Suricata Command socket.")
+	socketPath  = flag.String("suricata.socket-path", "/var/run/suricata-command.socket", "Path to the Suricata Command socket.")
 	addr        = flag.String("web.listen-address", ":9917", "Address to listen on")
 	path        = flag.String("web.telemetry-path", "/metrics", "Path for metrics")
 )
